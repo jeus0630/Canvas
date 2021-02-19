@@ -1,0 +1,111 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+ul,ol{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+.slider{
+    position: relative;
+    width: 1100px;
+    height: 500px;
+    margin: 100px auto;
+    overflow: hidden;
+}
+
+.slider .list{
+    width: calc(100% * 4);
+    height: 500px;
+    margin-left: -100%;
+}
+
+.slider .list:after{
+    content: '';
+    display: block;
+    clear: both;
+}
+
+.slider .list .item{
+    float: left;
+    width: calc(100% / 4);
+    height: 500px;
+}
+
+.item[data-index="1"]{
+    background: black;
+}
+
+.item[data-index="2"]{
+    background: orange;
+}
+
+.item[data-index="3"]{
+    background: pink;
+}
+
+.item[data-index="4"]{
+    background: blue;
+}
+
+.btn{
+    position: absolute;
+    top: 50%;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+}
+
+.btn.left-btn{
+    left: 20px;
+}
+
+.btn.left-btn:after{
+    content: '';
+    display: block;
+    border-right: 20px solid #fff;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+}
+
+.btn.right-btn{
+    right: 20px;
+}
+
+.btn.right-btn:after{
+    content: '';
+    display: block;
+    border-left: 20px solid #fff;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+}
+
+.pagination{
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    text-align: center;
+}
+
+.pagination .item{
+    display: inline-block;
+}
+
+.pagination .item a{
+    display: block;
+    width: 10px;
+    height: 10px;
+    border: 1px solid #fff;
+    border-radius: 50%;
+}
+
+.pagination .item a.on{
+    background: #fff;
+}
